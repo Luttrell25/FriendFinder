@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Train Tracker -->
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="background-color: black; color: white">
+        <h1 class="text-center">Friend Finder!</h1>
+        <h3 class="text-center">The best online resource for finding your new friend.</h3>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+        <!-- Current Trains-->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <!-- <h3 class="panel-title"><strong></strong></h3> -->
+            </div>
+            <div class="panel-body">
+              <button type="button" name="enterSurvey" id="enterSurveyButton" style="margin: auto; width: 100px; margin-left: 45%;">Take the Survey!</button>
+            </div>
+          </div>
+
+          <!-- Add Train  -->
+          <div class="panel panel-primary" id="friendFinder-view" style="display: none;">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Add Train</strong></h3>
+            </div>
+            <div class="panel-body">
+
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="name-input">Enter Your Name</label>
+                  <br>
+                  <input type="text" name="nameInput" id="nameInput">
+                </div>
+                <div class="form-group">
+                  <label for="train-name-input">Question #1</label>
+                  <br>
+                  <select id="question1">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="role-input">Question #2</label>
+                  <br>
+                  <select id="question2">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="start-input">Question #3</label>
+                  <br>
+                  <select id="question3">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #4</label>
+                  <br>
+                  <select id="question4">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #5</label>
+                  <br>
+                  <select id="question5">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #6</label>
+                  <br>
+                  <select id="question6">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #7</label>
+                  <br>
+                  <select id="question7">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #8</label>
+                  <br>
+                  <select id="question8">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #9</label>
+                  <br>
+                  <select id="question9">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Question #10</label>
+                  <br>
+                  <select id="question10">
+                    <option value="answer#1">answer #1</option>
+                    <option value="answer#2">answer #2</option>
+                    <option value="answer#3">answer #3</option>
+                    <option value="answer#4">answer #4</option>
+                  </select>
+                </div>
+                <button type="button" name="submit-button" id="submit-survey">Submit</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="new-friend-container container">
+        <div class="new-friend-name">
+          <p style="font-size: 30px;" id="friendName"></p>
+        </div>
+
+        <div class="new-friend-score">
+          <p style="font-size: 50px;" id="friendScore"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+
+  </body>
+
+</html>
